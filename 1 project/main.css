@@ -15,6 +15,10 @@ body {
           justify-content: center;
   height: 100vh;
   overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1489573280374-2e193c63726c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -35,6 +39,29 @@ h1, h2, h3, h4, h5, h6, p, a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  margin: 10px;
+  -webkit-transition: -webkit-box-flex .7s ease-in;
+  transition: -webkit-box-flex .7s ease-in;
+  transition: flex .7s ease-in;
+  transition: flex .7s ease-in, -webkit-box-flex .7s ease-in, -ms-flex .7s ease-in;
+  position: relative;
+  -webkit-box-shadow: 0 0 15px 10px #e4e0dd;
+          box-shadow: 0 0 15px 10px #e4e0dd;
+}
+
+.container .panel.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.container .panel.active .image-title {
+  opacity: 1;
 }
 
 .container .panel .image-title {
@@ -42,5 +69,19 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Mulish', sans-serif;
   color: #fff;
   font-weight: 450;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

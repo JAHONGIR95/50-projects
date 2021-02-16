@@ -11,6 +11,10 @@ body{
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1489573280374-2e193c63726c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 h1, h2, h3, h4, h5, h6, p, a{
@@ -26,17 +30,47 @@ h1, h2, h3, h4, h5, h6, p, a{
 
     .panel{
         height: 80vh;
-        // position: relative;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        border-radius: 50px;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        transition: flex .7s ease-in;
+        position: relative;
+        box-shadow: 0 0 15px 10px #e4e0dd;
+
+
+        &.active{
+            flex: 5;
+
+            .image-title{
+                opacity: 1;
+            }
+        }
 
         .image-title{
             font-size: 20px;
             font-family: 'Mulish', sans-serif;
             color: #fff;
             font-weight: 450;
-            // position: absolute;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            opacity: 0;
+
         }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none
     }
 }
