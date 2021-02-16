@@ -32,5 +32,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .container .panel {
   height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container .panel .image-title {
+  font-size: 20px;
+  font-family: 'Mulish', sans-serif;
+  color: #fff;
+  font-weight: 450;
 }
 /*# sourceMappingURL=main.css.map */
