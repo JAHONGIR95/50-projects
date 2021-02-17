@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 
 
         &.active{
-            flex: 5;
+            flex: 5; // flex-grow, flex-shrink, flex-basis
 
             .image-title{
                 opacity: 1;
