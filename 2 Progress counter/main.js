@@ -1,4 +1,4 @@
-const progress = document.querySelector('.progress');
+const progress = document.querySelector('#progress');
 const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
 const circles = document.querySelectorAll('.circle');
@@ -40,6 +40,15 @@ function update(){
 
     const actives = document.querySelectorAll('.active');
 
-    console
+    progress.style.width = ((actives.length - 1) / (circles.length - 1)) * 100 + '%';
+
+    if(activeCounter === 1){
+        prevBtn.disabled = true;
+    } else if (activeCounter === circles.length){
+        nextBtn.disabled = true;
+    } else {
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
+    }
 }
 
