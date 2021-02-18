@@ -4,11 +4,42 @@ const nextBtn = document.querySelector('#next');
 const circles = document.querySelectorAll('.circle');
 
 let activeCounter = 1;
+
 nextBtn.addEventListener('click', () => {
     activeCounter++;
 
+    // bu ifoda next bosilganda 4 dan oshib ketmasligini taminlaydi
     if(activeCounter > circles.length){
         activeCounter = circles.length;
     }
-    console.log(activeCounter);
+
+    update();
 })
+
+prevBtn.addEventListener('click', () => {
+    activeCounter--;
+
+    // bu ifoda prev bosilganda 1 tushib ketmasligini taminlaydi
+    if(activeCounter < 1){
+        activeCounter = 1;
+    }
+
+    update();
+})
+
+function update(){
+
+    circles.forEach((circle, key) => {
+
+        if(key < activeCounter){
+            circle.classList.add('active')
+        } else {
+            circle.classList.remove('active')
+        }
+    })
+
+    const actives = document.querySelectorAll('.active');
+
+    console
+}
+
