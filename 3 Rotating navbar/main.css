@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   padding: 50px 100px;
   -webkit-box-sizing: border-box;
@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6, p {
   border: none;
   font-size: 26px;
   color: #fff;
+  cursor: pointer;
 }
 
 .container .navbar-container .navbar button:focus {
@@ -67,5 +68,45 @@ h1, h2, h3, h4, h5, h6, p {
 
 .container .navbar-container .navbar button#close {
   left: 60%;
+}
+
+.container .navbar-container .navbar button#bars {
+  top: 60%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.container .content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+.container .content__title {
+  color: #333;
+}
+
+.container .content .author {
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.container .content p {
+  margin-bottom: 25px;
+}
+
+.container .content h4 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.container .content .image {
+  width: 100%;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */

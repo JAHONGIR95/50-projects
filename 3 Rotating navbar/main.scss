@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .container{
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     padding: 50px 100px;
     box-sizing: border-box;
@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6, p{
                 border: none;
                 font-size: 26px;
                 color: #fff;
+                cursor: pointer;
 
                 &:focus{
                     outline: none;
@@ -58,7 +59,48 @@ h1, h2, h3, h4, h5, h6, p{
                 &#close{
                     left: 60%;
                 }
+
+                &#bars{
+                    top: 60%;
+                    transform: rotate(90deg);
+                    transform-origin: top left;
+                }
             }
+        }
+    }
+
+    .content{
+
+        margin-left: auto;
+        margin-right: auto;
+
+        &__title{
+            color: #333;
+        }
+
+        .author{
+            font-style: italic;
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        p{
+            margin-bottom: 25px;
+        }
+
+        h4{
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        max-width: 1000px;
+        
+
+        .image{
+            width: 100%;
+            margin-bottom: 20px;
         }
     }
 }
