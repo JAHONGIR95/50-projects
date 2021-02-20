@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p{
     transform-origin: top left;
 
     &.show-nav{
-        transform: translate(-20deg);
+        transform: rotate(-20deg);
     }
 
     .navbar-container{
@@ -101,6 +101,62 @@ h1, h2, h3, h4, h5, h6, p{
         .image{
             width: 100%;
             margin-bottom: 20px;
+        }
+    }
+}
+
+.container{
+    &.show-nav{
+
+        .navbar{
+            transform: rotate(-70deg);
+        }
+        
+        & + nav {
+            li{
+                transform: translateX(0);
+                transition-delay: 0.3s;
+            }
+        }
+    }
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+    
+    ul{
+        list-style-type: none;
+        padding-left: 30px;
+
+        li{
+            
+            margin-bottom: 25px;
+            // transform: translateX(-120%);
+            transition: transform .4s ease-in;
+            
+            &:nth-child(2){
+                // transform: translateX(-150%); 
+                margin-left: 15px   
+            }
+    
+            &:nth-child(3){
+                // transform: translateX(-200%);    
+                margin-left: 30px;
+            }
+            
+            a{
+                
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+
+                i{
+                    margin-right: 10px;
+                }
+            }
         }
     }
 }

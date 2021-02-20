@@ -28,8 +28,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .container.show-nav {
-  -webkit-transform: translate(-20deg);
-          transform: translate(-20deg);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 .container .navbar-container {
@@ -108,5 +108,55 @@ h1, h2, h3, h4, h5, h6, p {
 .container .content .image {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.container.show-nav .navbar {
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.container.show-nav + nav li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  margin-bottom: 25px;
+  -webkit-transition: -webkit-transform .4s ease-in;
+  transition: -webkit-transform .4s ease-in;
+  transition: transform .4s ease-in;
+  transition: transform .4s ease-in, -webkit-transform .4s ease-in;
+}
+
+nav ul li:nth-child(2) {
+  margin-left: 15px;
+}
+
+nav ul li:nth-child(3) {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav ul li a i {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
