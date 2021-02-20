@@ -2,10 +2,70 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  font-family: 'Mulish', sans-serif;
+  background-color: #333;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fafafa;
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear, -webkit-transform .5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.container.show-nav {
+  -webkit-transform: translate(-20deg);
+          transform: translate(-20deg);
+}
+
+.container .navbar-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.container .navbar-container .navbar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ff7878;
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear, -webkit-transform .5s linear;
+}
+
+.container .navbar-container .navbar button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+}
+
+.container .navbar-container .navbar button:focus {
+  outline: none;
+}
+
+.container .navbar-container .navbar button#close {
+  left: 60%;
 }
 /*# sourceMappingURL=main.css.map */
