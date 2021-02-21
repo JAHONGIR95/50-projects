@@ -32,6 +32,13 @@ h1, h2, h3, h4, h5, h6, p {
           transform: rotate(-20deg);
 }
 
+.container.show-nav + nav li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
 .container .navbar-container {
   position: fixed;
   top: -100px;
@@ -108,18 +115,6 @@ h1, h2, h3, h4, h5, h6, p {
 .container .content .image {
   width: 100%;
   margin-bottom: 20px;
-}
-
-.container.show-nav .navbar {
-  -webkit-transform: rotate(-70deg);
-          transform: rotate(-70deg);
-}
-
-.container.show-nav + nav li {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
 }
 
 nav {

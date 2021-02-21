@@ -1,7 +1,9 @@
-const bars = document.querySelector('#bars');
-const close = document.querySelector('#close');
-const container = document.querySelector('.container');
+var open = document.querySelector('#bars');
+console.log('connected');
 
-bars.addEventListener('click', () => container.classList.add('show-nav'));
+open.addEventListener('click', haha());
 
-close.addEventListener('click', () => container.classList.remove('show-nav'));
+function haha(){
+    var a = console.log('helll');
+    return a;
+}

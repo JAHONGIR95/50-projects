@@ -26,6 +26,17 @@ h1, h2, h3, h4, h5, h6, p{
 
     &.show-nav{
         transform: rotate(-20deg);
+
+        // .navbar{
+        //     transform: rotate(-70deg);
+        // }
+        
+        & + nav {
+            li{
+                transform: translateX(0);
+                transition-delay: 0.3s;
+            }
+        }
     }
 
     .navbar-container{
@@ -101,22 +112,6 @@ h1, h2, h3, h4, h5, h6, p{
         .image{
             width: 100%;
             margin-bottom: 20px;
-        }
-    }
-}
-
-.container{
-    &.show-nav{
-
-        .navbar{
-            transform: rotate(-70deg);
-        }
-        
-        & + nav {
-            li{
-                transform: translateX(0);
-                transition-delay: 0.3s;
-            }
         }
     }
 }
