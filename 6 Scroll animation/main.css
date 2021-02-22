@@ -17,6 +17,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -54,17 +55,17 @@ h1 {
   transition: transform .4s ease, -webkit-transform .4s ease;
 }
 
-.box.show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
 .box h2 {
   font-size: 45px;
 }
 
-.box:nth-of-type(even) {
+.box:nth-child(even) {
   -webkit-transform: translateX(-400%);
           transform: translateX(-400%);
+}
+
+.box.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 /*# sourceMappingURL=main.css.map */

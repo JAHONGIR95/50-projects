@@ -9,6 +9,8 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
+
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -33,17 +35,17 @@ h1{
     color: #fff;
     transform: translateX(400%);
     transition: transform .4s ease;
-
-    &.show{
-        transform: translateX(0);
-    }
-
+    
     h2{
         font-size: 45px;
     }
-
-    &:nth-of-type(even){
+    
+    &:nth-child(even){
         transform: translateX(-400%);
+    }
+
+    &.show{
+        transform: translateX(0);
     }
 }
 
